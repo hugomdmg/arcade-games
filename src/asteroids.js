@@ -67,7 +67,6 @@ function Asteroids() {
         drawNave(context);
         drawDisparo(context);
         impactoNave();
-
       }
 
       dibujar();

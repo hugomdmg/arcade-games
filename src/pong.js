@@ -55,6 +55,7 @@ function Pong() {
       }
 
       dibujar(v1, cambio1);
+
       window.addEventListener("keydown", (event) => {
         console.log(event.keyCode)
         if (v1>18){
@@ -65,6 +66,7 @@ function Pong() {
         }
       }
       });
+
     }, [0.1]);
 
     function drawPala(ctx, i) {
@@ -119,11 +121,14 @@ function Pong() {
       ctx.stroke();
     }
     return (
+      <>
       <div class="cuadro">
         <p id="contador">{contador}</p>
 
         <canvas ref={canvasRef} width="350px" height="450px" />
       </div>
+      
+      </>
     );
   }
 
@@ -131,6 +136,14 @@ function Pong() {
     <>
       <Cuadro />
       <div class="cuadro">
+      <div id="botones">
+      <button onClick={()=>{if (i > 45) {
+          i = i - 15;
+        }}}>^</button>
+      <button onClick={()=>{if (i < 400) {
+          i = i + 15;
+        }}}>v</button>
+      </div>
         <button
           onClick={() => {
             if(control){

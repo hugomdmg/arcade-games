@@ -1,7 +1,7 @@
 .cuadro{
   display: flex;
   justify-content: center;
-  padding-top: 7ch;
+  padding-top: 2ch;
 }
 
 #contador{
@@ -11,4 +11,11 @@
 canvas{
   border: 1px solid rgb(179, 95, 16);
   background-color: rgb(42, 56, 33);
+}
+
+#botones{
+  display: flex;
+  flex-direction: column;
+  width: 8ch;
+  background-color: rgb(114, 114, 209);
 }
